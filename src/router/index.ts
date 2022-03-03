@@ -4,11 +4,11 @@ import { RouteConfig } from "react-router-config";
 const routesConfig: RouteConfig[] = [
   {
     path: "/home",
-    component: lazy(() => import("../views/Home")),
+    component: lazy(() => import("@/views/Home")),
   },
   {
     path: "/about",
-    component: lazy(() => import("../views/About")),
+    component: lazy(() => import("@/views/About")),
   },
 ];
 

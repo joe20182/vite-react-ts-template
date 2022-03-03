@@ -1,11 +1,9 @@
-import { useState, Suspense } from 'react'
-import { Link, Switch } from 'react-router-dom'
+import { Suspense } from 'react'
+import { Link } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
-import routes from './router'
+import routes from '@/router'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <h1>App</h1>
