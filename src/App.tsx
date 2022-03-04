@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <h1>App</h1>
       <div className="links">
-        <Link to="home">HOME</Link>
-        <Link to="about">About</Link>
+        <Link to="/about">About</Link>&nbsp;
+        <Link to="/about/A">About Nested</Link>
       </div>
       <div className="page-wrapper">
         <Suspense fallback={<div>Loading</div>}>
