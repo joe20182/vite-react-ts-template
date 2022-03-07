@@ -9,7 +9,7 @@ interface RouterComponent extends RouteComponentProps {
 }
 
 const About: FC<RouterComponent> = ({route}) => {
-  const count = useAppSelector(selectCount)
+  const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
 
   const add = () => dispatch(incrementByAmount(2))
