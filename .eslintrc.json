@@ -6,7 +6,9 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -18,9 +20,13 @@
   },
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    // no need to import react after v17
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+    // "prettier/prettier": "error"
   }
 }

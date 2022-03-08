@@ -1,19 +1,19 @@
-import { lazy } from "react";
-import { RouteConfig } from "react-router-config";
+import { lazy } from 'react'
+import { RouteConfig } from 'react-router-config'
 
 const routesConfig: RouteConfig[] = [
   {
-    path: "/",
+    path: '/',
     exact: true,
-    component: lazy(() => import("@/views/Home")),
+    component: lazy(() => import('@/views/Home')),
   },
   {
-    path: "/about",
-    component: lazy(() => import("@/views/About")),
+    path: '/about',
+    component: lazy(() => import('@/views/About')),
     routes: [
       {
-        path: "/about/A",
-        component: lazy(() => import("@/views/About/A")),
+        path: '/about/A',
+        component: lazy(() => import('@/views/About/A')),
       },
     ],
   },
@@ -21,6 +21,6 @@ const routesConfig: RouteConfig[] = [
   //   path: "*",
   //   component: lazy(() => import("@/views/Home")),
   // },
-];
+]
 
-export default routesConfig;
+export default routesConfig

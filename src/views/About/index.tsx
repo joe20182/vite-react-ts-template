@@ -8,9 +8,9 @@ interface RouterComponent extends RouteComponentProps {
   route?: RouteConfig
 }
 
-const About: FC<RouterComponent> = ({route}) => {
-  const count = useAppSelector(selectCount);
-  const dispatch = useAppDispatch();
+const About: FC<RouterComponent> = ({ route }) => {
+  const count = useAppSelector(selectCount)
+  const dispatch = useAppDispatch()
 
   const add = () => dispatch(incrementByAmount(2))
 
@@ -19,12 +19,9 @@ const About: FC<RouterComponent> = ({route}) => {
       <h2>About</h2>
       <p>Count: {count}</p>
       <button onClick={add}>ADD</button>
-      <div className="nested-routes">
-        {renderRoutes(route?.routes)}
-      </div>
+      <div className="nested-routes">{renderRoutes(route?.routes)}</div>
     </div>
   )
-
 }
 
 export default About

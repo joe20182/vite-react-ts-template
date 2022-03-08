@@ -1,30 +1,30 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "@/store";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { RootState } from '@/store'
 
-const initialState: number = 0;
+const initialState = 0
 
 export const countSlice = createSlice({
-  name: "count",
+  name: 'count',
   initialState,
   reducers: {
     increment: (state) => {
-      state += 1;
-      return state;
+      state += 1
+      return state
     },
     decrement: (state) => {
-      state -= 1;
-      return state;
+      state -= 1
+      return state
     },
     incrementByAmount: (state, action: PayloadAction<number>) => {
-      state += action.payload;
-      return state;
+      state += action.payload
+      return state
     },
   },
-});
+})
 
-export const { increment, decrement, incrementByAmount } = countSlice.actions;
+export const { increment, decrement, incrementByAmount } = countSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectCount = (state: RootState) => state.count;
+export const selectCount = (state: RootState) => state.count
 
-export default countSlice.reducer;
+export default countSlice.reducer
